@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="form_result.html" method="get">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- 1. text -->
+            <label for="fname">Full Name:</label><br>
+            <input type="text" id="fname" name="full_name" placeholder="e.g., Ali Raza" required><br><br>
+
+            <label for="pwd">Account Password:</label><br>
+            <input type="password" id="pwd" name="password" maxlength="16" placeholder="Max 16 characters"
+                required><br><br>
+
+            <label for="uemail">Email Address:</label><br>
+            <input type="email" id="uemail" name="email" placeholder="student@students.au.edu.pk" required><br><br>
+
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{7}" placeholder="0300-1234567"
+                required><br><br>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" max="2010-12-31" required><br><br>
+
+
+            <span>Gender:</span><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+
+            <label for="favcolor">ID Card Badge Color:</label><br>
+            <input type="color" id="favcolor" name="badge_color" value="#004488"><br><br>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Academic Information</legend>
+
+
+            <label for="sem">Current Semester:</label><br>
+            <input type="number" id="sem" name="semester" min="1" max="8" value="1"><br><br>
+
+
+            <label for="skill">HTML & CSS Familiarity (1 to 10):</label><br>
+            <input type="range" id="skill" name="html_skill" min="1" max="10" value="5"><br><br>
+
+
+            <label for="portfolio">GitHub / Portfolio URL:</label><br>
+            <input type="url" id="portfolio" name="github_url" placeholder="https://github.com/username"><br><br>
+
+
+            <label for="transcript">Upload Previous Transcript:</label><br>
+            <input type="file" id="transcript" name="transcript_file" accept=".pdf,.jpg,.png"><br><br>
+            <label for="dept">Department:</label><br>
+            <select id="dept" name="department">
+                <option value="CS" selected>Computer Science (CS)</option>
+                <option value="SE">Software Engineering (SE)</option>
+                <option value="AI">Artificial Intelligence (AI)</option>
+                <option value="CYS">Cyber Security (CYS)</option>
+            </select><br><br>
+            <label for="campus">Preferred Campus:</label><br>
+            <input list="campuses" id="campus" name="campus" placeholder="Type or choose a campus">
+            <datalist id="campuses">
+                <option value="Islamabad Main Campus">
+                <option value="Kamra Campus">
+                <option value="Multan Campus">
+            </datalist><br><br>
+            <label for="bio">Academic Goals / Remarks:</label><br>
+            <textarea id="bio" name="remarks" rows="4" cols="40"
+                placeholder="Write a short note about your goals..."></textarea><br><br>
+
+
+            <input type="checkbox" id="agree" name="terms_agreed" value="Yes" required>
+            <label for="agree">I confirm that the above academic details are accurate.</label>
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit Registration">
+        <input type="reset" value="Reset Form">
+        <input type="submit" value="Submit in New Tab" formtarget="_blank">
+    </form>
+
+</body>
+
+</html>

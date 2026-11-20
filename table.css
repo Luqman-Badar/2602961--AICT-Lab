@@ -1,0 +1,16 @@
+.section{
+    background-color: white;
+    color: orange;
+    border: 2px solid orangered;
+}
+span{
+    color: darkblue;
+}
+body{
+   background-color: black;
+   color: white;
+}
+#main{
+    color: grey;
+    text-align: center;
+}
